@@ -1,7 +1,172 @@
-body{
-    /* background-color: rgb(56, 3, 3); */
-    background-color: rgb(30, 54, 192);
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
+
+body{
+  background: #222bd4;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+
+.area{
+    z-index: 2; /* Asignar un z-index menor que el de la carta */
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  list-style: none;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li i {
+  font-size: 30px; /* Ajustar el tamaño del corazón según sea necesario */
+  color: rgb(0, 17, 116); /* Color del corazón */
+}
+
+
+#heart1{
+    font-size: 40px;
+}
+
+#heart2{
+    font-size: 50px;
+}
+
+#heart3{
+    font-size: 60px;
+}
+
+#heart4{
+    font-size: 70px;
+}
+
+#heart5{
+    font-size: 80px;
+}
+
+
+#heart6{
+    font-size: 90px;
+}
+
+#heart7{
+    font-size: 100px;
+}
+
+
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+/* Ajustar los estilos de las demás posiciones de corazones si es necesario */
+
+/* Resto de estilos de animación como antes */
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+/* // CARTA */
 
 
 .letter_container{
@@ -13,39 +178,31 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
+    font-size: 200px;
 }
 
-.letter{
+.letter_container i{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 250px;
+    z-index: 4;
+}
+
+.opacity-transition {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* .letter{
     box-shadow: 5px 5px 15px 15px rgb(14, 9, 44);
     width: 400px;
     height: 200px;
     border: 1px rgb(37, 57, 235) solid;
-    background-color:  rgba(13, 9, 255, 0.966);
-}
-
-
-.letter_lines_container{
-    width: 400px;
-    height: 200px;
-    border: 1px solid white;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-}
-
-.letter_line_left{
-    /* transform: translateX(-15%) rotate(50deg); */
-    width: 50%;
-    bottom: 0;
-    border: 1px rgb(255, 255, 255) solid;
-}
-
-.letter_line_right{
-    bottom: 0;
-    /* transform: translateX(15%) rotate(-50deg); */
-    width: 50%;
-    border: 1px rgb(13, 248, 52) solid;
-}
+    background-color:  rgba(38, 34, 255, 0.966);
+} */
 
 
 .options{
@@ -53,30 +210,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    gap: 20px;
+    z-index: 4;
 }
 
 .options_open{
     width: 100px;
-    padding: 10px;
-    cursor: pointer;
     font-family:cursive;
     font-size: 20px;
-    color: rgb(21, 19, 133);
-    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    background: transparent;
     border: 0;
+    button{
+        cursor: pointer;
+    }
 }
 
-.options_close{
-    width: 100px;
-    padding: 10px;
+button{
+    z-index: 4;
     cursor: pointer;
-    font-family:cursive;
-    font-size: 20px;
-    color: rgb(21, 19, 133);
-    background: rgb(255, 255, 255);
-    border: 0;
 }
+
+
 
 
