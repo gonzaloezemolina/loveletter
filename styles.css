@@ -1,0 +1,82 @@
+body{
+    /* background-color: rgb(56, 3, 3); */
+    background-color: rgb(30, 54, 192);
+}
+
+
+.letter_container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter{
+    box-shadow: 5px 5px 15px 15px rgb(14, 9, 44);
+    width: 400px;
+    height: 200px;
+    border: 1px rgb(37, 57, 235) solid;
+    background-color:  rgba(13, 9, 255, 0.966);
+}
+
+
+.letter_lines_container{
+    width: 400px;
+    height: 200px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.letter_line_left{
+    /* transform: translateX(-15%) rotate(50deg); */
+    width: 50%;
+    bottom: 0;
+    border: 1px rgb(255, 255, 255) solid;
+}
+
+.letter_line_right{
+    bottom: 0;
+    /* transform: translateX(15%) rotate(-50deg); */
+    width: 50%;
+    border: 1px rgb(13, 248, 52) solid;
+}
+
+
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.options_open{
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    font-family:cursive;
+    font-size: 20px;
+    color: rgb(21, 19, 133);
+    background: rgb(255, 255, 255);
+    border: 0;
+}
+
+.options_close{
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    font-family:cursive;
+    font-size: 20px;
+    color: rgb(21, 19, 133);
+    background: rgb(255, 255, 255);
+    border: 0;
+}
+
+
